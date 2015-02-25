@@ -18,7 +18,7 @@ module.exports = function (grunt, projectConfig) {
 
         shell: {
             typescript: {
-                command: 'tsc src/app.ts  --sourceMap  --outDir  build/ --module commonjs',
+                command: 'node ' + __dirname +  '/TypeScript/built/local/tsc.js -t ES5 ' +__dirname+ '/src/app.ts  --sourceMap  --outDir  build/ --module commonjs',
                 options: {
                     stdout: true
                 }
