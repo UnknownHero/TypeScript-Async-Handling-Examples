@@ -16,24 +16,7 @@ module.exports = function (grunt, projectConfig) {
 
         project: projectConfig,
 
-        concurrent: {
-            build: {
-                tasks: ['watch:all', 'watch:deps'],
-                options: {
-                    logConcurrentOutput: true
-                }
-            }
-        },
-
-
-
         shell: {
-            sync: {
-                command: 'mkdir -p ./build/<%= project.name %>/ && rsync -avzh --delete  --exclude="node_modules" --exclude="build" --exclude="*.ts" ./ ./build/<%= project.name %>',
-                options: {
-                    stdout: true
-                }
-            },
             typescript: {
                 command: 'tsc src/app.ts  --sourceMap  --outDir  build/ --module commonjs',
                 options: {
@@ -44,8 +27,7 @@ module.exports = function (grunt, projectConfig) {
 
     });
 
-    grunt.registerTask('build', ['shell:sync', 'shell:typescript']);
-    grunt.registerTask('fullbuild', ['shell:npm', 'shell:bower', 'build']);
+    grunt.registerTask('build', ['shell:typescript']);
 
 
 
