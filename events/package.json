@@ -2,7 +2,7 @@
   "name": "",
   "version": "0.1.0",
   "dependencies": {
-        
+        "eventemitter2": "0.4.*"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
