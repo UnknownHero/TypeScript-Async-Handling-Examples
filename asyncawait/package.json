@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "dependencies": {
         "asyncawait" : "0.7.4",
-        "bluebird" : "*"
+        "bluebird" : "*",
+        "lodash" : "*"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
