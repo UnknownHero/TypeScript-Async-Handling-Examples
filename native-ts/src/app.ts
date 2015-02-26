@@ -1,6 +1,6 @@
 ///<reference path="./links.d.ts"/>
 
-async function startup() {
+var startup = async function() {
 
    setTimeout(function(){
 

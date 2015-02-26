@@ -7,9 +7,10 @@ var await = require('asyncawait/await');
 var countFiles = async(function (dir) {
     var fsPromise = Promise.promisifyAll(fs);
     var files = await(fsPromise.readdirAsync(dir));
-    return 1;
+    return files.length;
 });
 countFiles(__dirname).then(function () {
     console.log(arguments);
 });
+console.log('!!');
 //# sourceMappingURL=app.js.map

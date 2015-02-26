@@ -13,7 +13,7 @@ var __awaiter = this.__awaiter || function (gen) {
     }
     return step(gen.next());
 };
-function startup() {
+var startup = function () {
     return new Promise(function (_resolve) {
         _resolve(__awaiter(function* () {
             setTimeout(function () {
@@ -21,8 +21,11 @@ function startup() {
             }, 1000);
         }()));
     });
-}
+};
 console.log("Start");
-startup();
+startup().then(function(){
+    "use strict";
+    console.log(arguments);
+});
 console.log("End");
 //# sourceMappingURL=app.js.map

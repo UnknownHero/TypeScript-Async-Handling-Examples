@@ -2,7 +2,7 @@
   "name": "",
   "version": "0.1.0",
   "dependencies": {
-    "es6-promise": "*"
+        "sync" : "*"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
